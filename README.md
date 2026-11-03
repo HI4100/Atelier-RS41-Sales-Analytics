@@ -35,6 +35,16 @@ A reproducible retail analytics portfolio project built with **Python, pandas, S
 
 These describe only the synthetic dataset and should not be interpreted as market or company performance.
 
+## Visual overview
+
+![Sales by region](visualizations/sales_by_region.svg)
+
+![Sales by category](visualizations/sales_by_category.svg)
+
+![Monthly sales trend](visualizations/monthly_sales_trend.svg)
+
+![Orders by payment method](visualizations/payment_methods.svg)
+
 ## Repository structure
 
 ```text
