@@ -73,6 +73,10 @@ Atelier-RS41-Sales-Analytics/
 
 The analysis validates the source data, prints KPI and segment summaries, writes six summary CSVs to `outputs/`, and exports four PNG charts to `outputs/charts/`.
 
+## Power BI dashboard
+
+A Power BI Desktop dashboard build guide and DAX starter measures are available in [`powerbi/`](powerbi/). Follow [`powerbi/POWER_BI_GUIDE.md`](powerbi/POWER_BI_GUIDE.md) to import the CSV, create the Calendar relationship, build KPI measures, and assemble the interactive report. The editable `.pbix` is created locally in Power BI Desktop; it is not included until it has been built and reviewed.
+
 ## SQL
 
 Import `data/retail_sales.csv` into SQLite as `retail_sales`, then execute `sql/analysis_queries.sql`. The file includes KPI, regional, category, monthly, payment, product, discount-band and region-category queries.
