@@ -1,0 +1,54 @@
+-- Power BI measures for the retail_sales table.
+-- In Power BI, rename the imported CSV table to retail_sales before creating these.
+-- Format currency measures as INR (₹), 2 decimal places.
+
+Total Sales = SUM(retail_sales[sales_amount_inr])
+
+Total Orders = DISTINCTCOUNT(retail_sales[order_id])
+
+Units Sold = SUM(retail_sales[quantity])
+
+Average Order Value = DIVIDE([Total Sales], [Total Orders], 0)
+
+Estimated Profit = SUM(retail_sales[profit_amount_inr])
+
+Estimated Profit Margin % = DIVIDE([Estimated Profit], [Total Sales], 0)
+
+Average Discount % = AVERAGE(retail_sales[discount_pct])
+
+Sales per Unit = DIVIDE([Total Sales], [Units Sold], 0)
+
+Orders Previous Month =
+CALCULATE(
+    [Total Orders],
+    DATEADD('Calendar'[Date], -1, MONTH)
+)
+
+Sales Previous Month =
+CALCULATE(
+    [Total Sales],
+    DATEADD('Calendar'[Date], -1, MONTH)
+)
+
+Sales MoM Change % =
+DIVIDE([Total Sales] - [Sales Previous Month], [Sales Previous Month], 0)
+
+Sales YTD =
+TOTALYTD([Total Sales], 'Calendar'[Date])
+
+-- Create this as a calculated table using Modeling > New table.
+Calendar =
+ADDCOLUMNS(
+    CALENDAR(MIN(retail_sales[order_date]), MAX(retail_sales[order_date])),
+    "Year", YEAR([Date]),
+    "Month Number", MONTH([Date]),
+    "Month", FORMAT([Date], "MMM"),
+    "Year Month", FORMAT([Date], "YYYY-MM"),
+    "Quarter", "Q" & FORMAT([Date], "Q")
+)
+
+-- After creating Calendar:
+-- 1. Sort Calendar[Month] by Calendar[Month Number].
+-- 2. Sort Calendar[Year Month] by Calendar[Date] (or a YearMonth numeric sort column).
+-- 3. Create relationship Calendar[Date] (one) -> retail_sales[order_date] (many).
+-- 4. Mark Calendar as the date table using Calendar[Date].
