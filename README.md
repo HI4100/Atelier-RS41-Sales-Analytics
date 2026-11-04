@@ -1,31 +1,31 @@
 # ATELIER | Retail Sales & Profit Analytics
 
-An end-to-end retail analytics portfolio project combining **Python, pandas, SQL, data validation and Microsoft Power BI**.
+An end-to-end retail analytics portfolio project combining **Microsoft Power BI, Power Query, DAX, Python, pandas and SQL**. The project explores a synthetic 2025 retail dataset and presents business performance through a two-page interactive dashboard.
 
-The project analyses a 2025 retail sales dataset and presents the results through a two-page interactive Power BI dashboard focused on executive performance, products and profit.
+> **Data transparency:** All transaction data is synthetic practice data. It does not represent a real retailer or actual customer transactions. Profit is illustrative, calculated using assumed category cost ratios; it is not audited accounting profit.
 
-> **Data transparency:** The 360-row dataset used in this portfolio is synthetic practice data. It does not represent a real company's customer or financial records. Profit values are illustrative estimates for analytical practice.
-
----
-
-## Dashboard
+## Dashboard preview
 
 ### Page 1 — Executive Overview
-The executive dashboard provides a high-level view of business performance:
 
-- **Total Sales:** ₹1.18M
-- **Total Orders:** 360
-- **Average Order Value:** ₹3.29K
-- **Units Sold:** 1K+
+![Executive Overview](screenshots/executive-overview.png)
+
+This page provides a high-level view of the dataset through four KPI cards and four analysis visuals:
+- Total Sales
+- Total Orders
+- Average Order Value
+- Units Sold
 - Sales by Region
 - Sales by Category
 - Sales by Payment Method
 - Monthly Sales Trend
 
 ### Page 2 — Product & Profit Analysis
-The second page focuses on product, category and profitability performance:
 
-- **Total Profit:** ₹511.71K
+![Product & Profit Analysis](screenshots/product-profit-analysis.png)
+
+This page explores product and profitability patterns:
+- Total Profit
 - Top Products by Sales
 - Profit by Category
 - Profit by Region
@@ -33,151 +33,128 @@ The second page focuses on product, category and profitability performance:
 - Discount vs Profit Analysis
 - Interactive Region and Category slicers
 
----
+## What business questions does it explore?
 
-## Key Dataset Findings
+- How much sales value and illustrative profit does the sample generate?
+- How many orders and units are recorded, and what is the average order value?
+- Which regions and categories contribute most to sales and estimated profit?
+- Which products lead the dataset by sales?
+- How do payment methods compare?
+- How does sales performance vary by month?
+- How do discount levels relate to sales and estimated profit in the sample?
 
-| Metric | Result |
+## Dataset profile
+
+| Measure | Verified value |
 |---|---:|
-| Records / Unique Orders | 360 / 360 |
-| Date Coverage | Jan 1, 2025 – Dec 31, 2025 |
-| Missing Values | 0 |
-| Duplicate Order IDs | 0 |
-| Sales Formula Mismatches | 0 |
-| Units Sold | 1,083 |
-| Total Sales | ₹11,83,184.10 |
-| Estimated Profit | ₹5,11,709.71 |
-| Average Order Value | ₹3,286.62 |
+| Records / unique order IDs | 360 / 360 |
+| Date coverage | 2025-01-01 to 2025-12-31 |
+| Missing values | 0 |
+| Duplicate order IDs | 0 |
+| Sales formula mismatches | 0 |
+| Units sold | 1,083 |
+| Total sales | ₹11,83,184.10 |
+| Illustrative estimated profit | ₹5,11,709.71 |
+| Average order value | ₹3,286.62 |
 
-### Sample insights
+## Selected sample findings
 
-- **South** generated the highest sales among regions.
-- **Electronics** generated the highest category sales.
-- **June 2025** was the strongest month by sales.
-- **Card** was the most frequently used payment method in the dataset.
+- South is the highest-sales region in this synthetic dataset.
+- Electronics is the highest-sales category.
+- June 2025 is the highest-sales month.
+- Card is the most frequent payment method, with 100 orders.
 
-These findings describe the synthetic dataset only.
+These are descriptions of this generated dataset only, not claims about an actual retailer or market.
 
----
+## Technology
 
-## Technology Stack
+| Tool | Use |
+|---|---|
+| Microsoft Power BI Desktop | Interactive reporting and visual analytics |
+| Power Query | Importing and preparing the CSV |
+| DAX | KPI and aggregation measures |
+| Python / pandas | Validation, summaries and reproducible analysis |
+| SQL / SQLite | Structured analytical queries |
+| GitHub | Version control and portfolio documentation |
 
-- **Microsoft Power BI Desktop** — interactive dashboard and DAX measures
-- **Python** — analysis workflow
-- **pandas** — data processing and validation
-- **Matplotlib** — chart generation
-- **SQL** — analytical queries
-- **Git & GitHub** — version control and portfolio presentation
-
----
-
-## Repository Structure
+## Repository contents
 
 ```text
 Atelier-RS41-Sales-Analytics/
-├── analysis.py                 # Python validation and analysis workflow
-├── requirements.txt            # Python dependencies
-├── data/                       # Source dataset and documentation
-├── outputs/                    # Generated summaries and charts
-├── powerbi/                    # Power BI project documentation / PBIX
-├── reports/                    # Business analysis reports
-├── sql/                        # SQL analysis queries
-├── tests/                      # Validation tests
-└── README.md
+├── data/
+│   ├── retail_sales.csv
+│   └── DATA_DICTIONARY.md
+├── dashboard/
+│   └── Atelier_Retail_Sales_Analytics.pbix
+├── screenshots/
+│   ├── executive-overview.png
+│   └── product-profit-analysis.png
+├── powerbi/
+│   ├── README.md
+│   ├── POWER_BI_GUIDE.md
+│   └── measures.dax
+├── reports/
+│   ├── initial_analysis.md
+│   └── business_insights.md
+├── sql/
+│   └── analysis_queries.sql
+├── tests/
+│   ├── README.md
+│   └── test_analysis.py
+├── visualizations/
+├── outputs/
+├── analysis.py
+└── requirements.txt
 ```
 
----
+## Open the Power BI report
 
-## Power BI Measures
+1. Download `dashboard/Atelier_Retail_Sales_Analytics.pbix`.
+2. Open it using Microsoft Power BI Desktop.
+3. If prompted, review the data-source path and reconnect it to `data/retail_sales.csv`.
+4. Refresh the report if required.
+5. Explore both report pages and use the region/category slicers on Page 2.
 
-The dashboard uses measures for core KPIs such as:
+The PBIX is the editable report file. Screenshots above are static previews.
 
-- **Total Sales**
-- **Total Orders**
-- **Average Order Value**
-- **Units Sold**
-- **Total Profit**
+## Run the Python analysis
 
-The report also uses interactive filtering to analyse results by **region** and **category**.
-
----
-
-## Run the Python Analysis
-
-1. Install Python 3.10 or newer.
-2. Create a virtual environment:
+Requires Python 3.10 or newer.
 
 ```bash
 python -m venv .venv
 ```
 
-3. Activate it.
-
-**Windows**
+Windows activation:
 
 ```bash
 .venv\Scripts\activate
 ```
 
-**macOS / Linux**
-
-```bash
-source .venv/bin/activate
-```
-
-4. Install dependencies:
+Install dependencies and run:
 
 ```bash
 pip install -r requirements.txt
-```
-
-5. Run the analysis:
-
-```bash
 python analysis.py
-```
-
-6. Run tests:
-
-```bash
 python -m unittest discover -s tests -v
 ```
 
----
+The analysis script validates the dataset, generates KPI and segment summaries, and exports charts.
 
-## Data Quality Checks
+## Data quality and assumptions
 
-The Python workflow validates:
+The analysis checks required fields, missing data, duplicate IDs, date and numeric validity, discount bounds, positive quantities/sales, and consistency of the sales formula:
 
-- Required columns
-- Empty datasets
-- Missing values
-- Duplicate order IDs
-- Date validity
-- Numeric data types
-- Positive quantities and sales values
-- Discount ranges
-- Sales calculation consistency
+`quantity × unit_price_inr × (1 − discount_pct)`
 
----
+Profit is assumption-based and included for learning dashboard analysis. It should not be treated as actual gross profit, net profit, or an audited financial measure.
 
-## Project Limitations
+## Skills demonstrated
 
-- The dataset is synthetic and intended for portfolio practice.
-- The project does not include customer-level or personally identifiable data.
-- Profit is illustrative and should not be treated as audited net profit.
-- Results are descriptive and should not be interpreted as forecasts.
-
----
+Business Intelligence · Power BI · Power Query · DAX · KPI design · Data validation · Data cleaning · Python · pandas · SQL · Data visualization · Analytical storytelling
 
 ## Author
 
-**Humza Warsi**
-
-GitHub: https://github.com/HI4100
-
-LinkedIn: https://www.linkedin.com/in/humza-warsi-910aa941b/
-
----
-
-⭐ If you found this project useful, feel free to explore the repository and dashboard.
+**Humza Warsi**  
+GitHub: [HI4100](https://github.com/HI4100)  
+LinkedIn: [Humza Warsi](https://www.linkedin.com/in/humza-warsi-910aa941b/)
