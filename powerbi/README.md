@@ -38,3 +38,12 @@ See `measures.dax` for the core measures:
 
 ## Data caveat
 This is a synthetic practice dataset. Profit is illustrative and assumption-based, not actual accounting profit.
+
+
+---
+
+## ✨ ATELIER 41 Signature
+
+**Build it clearly. Test it carefully. Document it honestly. Improve it continuously.**
+
+This dashboard is part of the ATELIER 41 project series by [Humza Warsi](https://github.com/HI4100).
