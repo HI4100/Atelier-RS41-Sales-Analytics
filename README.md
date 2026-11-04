@@ -180,3 +180,21 @@ LinkedIn: [Humza Warsi](https://www.linkedin.com/in/humza-warsi-910aa941b/)
 *Maybe fate brought you here for your sparkling future. ✨ Let's connect, learn and build something meaningful.* 🚀
 
 <!-- © Humza Warsi | ATELIER 41 -->
+
+
+
+---
+
+## ✨ ATELIER 41 — Portfolio Signature
+
+> **Build it clearly. Analyze it carefully. Test it honestly. Improve it continuously.**
+
+**Created as part of the ATELIER 41 portfolio by Humza Warsi.** ✨
+
+🌐 **Portfolio:** [github.com/HI4100](https://github.com/HI4100)  
+📧 **Contact:** humzawarsi41@gmail.com
+
+### 💎 ATELIER 41 Identity
+**A consistent signature across my practical technology projects — where learning is demonstrated through work, documentation and continuous improvement.**
+
+*Maybe fate brought you here for your sparkling future. ✨ Let's connect, learn and build something meaningful.* 🚀
