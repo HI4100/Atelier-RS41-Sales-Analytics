@@ -1,68 +1,40 @@
-# Power BI Dashboard
+# Power BI Dashboard — Final Report Package
 
-## Project
-**ATELIER | Retail Sales & Profit Analytics**
+## Editable report
+The finished two-page Power BI report is named `Atelier_Retail_Sales_Analytics.pbix`.
 
-The Power BI report contains two interactive report pages built from the retail sales dataset.
-
----
+Expected repository location: `dashboard/Atelier_Retail_Sales_Analytics.pbix`.
 
 ## Page 1 — Executive Overview
-
-### KPI Cards
 - Total Sales
 - Total Orders
 - Average Order Value
 - Units Sold
-
-### Visuals
 - Sales by Region
 - Sales by Category
 - Sales by Payment Method
 - Monthly Sales Trend
 
----
-
 ## Page 2 — Product & Profit Analysis
-
-### KPI
 - Total Profit
-
-### Visuals
 - Top Products by Sales
 - Profit by Category
 - Profit by Region
 - Category Sales Volume
 - Discount vs Profit Analysis
+- Region and Category slicers
 
-### Interactive Filters
-- Region
-- Category
+## Source data
+The PBIX was built from `data/retail_sales.csv`. If Power BI prompts for a missing source after opening it on another computer, use **Transform data → Data source settings** to point it to the repository's CSV.
 
----
+## DAX starter measures
+See `measures.dax` for the core measures:
+- Total Sales
+- Total Orders
+- Units Sold
+- Average Order Value
+- Estimated Profit
+- Estimated Profit Margin
 
-## Core Measures
-
-Example DAX measures:
-
-```DAX
-Total Sales = SUM(retail_sales[sales_amount_inr])
-
-Total Orders = DISTINCTCOUNT(retail_sales[order_id])
-
-Average Order Value = DIVIDE([Total Sales], [Total Orders])
-
-Units Sold = SUM(retail_sales[quantity])
-
-Total Profit = SUM(retail_sales[profit_amount_inr])
-```
-
----
-
-## Opening the Report
-
-1. Open the `.pbix` file in **Microsoft Power BI Desktop**.
-2. Refresh the dataset if required.
-3. Use the Region and Category slicers on Page 2 to interact with the analysis.
-
-> The PBIX file should be added to this folder after the final local report file is uploaded to the repository.
+## Data caveat
+This is a synthetic practice dataset. Profit is illustrative and assumption-based, not actual accounting profit.
