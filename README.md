@@ -1,4 +1,4 @@
-# ATELIER | Retail Sales & Profit Analytics
+# ATELIER 41 | Retail Sales & Profit Analytics
 
 An end-to-end retail analytics portfolio project combining **Microsoft Power BI, Power Query, DAX, Python, pandas and SQL**. The project explores a synthetic 2025 retail dataset and presents business performance through a two-page interactive dashboard.
 
@@ -158,3 +158,14 @@ Business Intelligence · Power BI · Power Query · DAX · KPI design · Data va
 **Humza Warsi**  
 GitHub: [HI4100](https://github.com/HI4100)  
 LinkedIn: [Humza Warsi](https://www.linkedin.com/in/humza-warsi-910aa941b/)
+
+
+---
+
+## ✨ ATELIER 41 Signature
+
+> **Build it clearly. Test it carefully. Document it honestly. Improve it continuously.**
+
+This project is part of my **ATELIER 41** portfolio — a connected collection of practical projects built and documented by **Humza Warsi**.
+
+🔗 GitHub: [@HI4100](https://github.com/HI4100) • ✨ **ATELIER 41**
