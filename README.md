@@ -198,3 +198,17 @@ LinkedIn: [Humza Warsi](https://www.linkedin.com/in/humza-warsi-910aa941b/)
 **A consistent signature across my practical technology projects — where learning is demonstrated through work, documentation and continuous improvement.**
 
 *Maybe fate brought you here for your sparkling future. ✨ Let's connect, learn and build something meaningful.* 🚀
+
+
+---
+
+## ✨ ATELIER 41
+
+> **Build it clearly. Analyze it carefully. Test it honestly. Improve it continuously.**
+
+**Humza Warsi ~ Author**  
+Part of the **ATELIER 41** project collection.
+
+🔗 Portfolio: [@HI4100](https://github.com/HI4100)
+
+*Maybe fate brought you here for your sparkling future. ✨*
