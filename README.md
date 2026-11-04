@@ -160,26 +160,23 @@ GitHub: [HI4100](https://github.com/HI4100)
 LinkedIn: [Humza Warsi](https://www.linkedin.com/in/humza-warsi-910aa941b/)
 
 
----
-
-## ✨ ATELIER 41 Signature
-
-> **Build it clearly. Test it carefully. Document it honestly. Improve it continuously.**
-
-This project is part of my **ATELIER 41** portfolio — a connected collection of practical projects built and documented by **Humza Warsi**.
-
-🔗 GitHub: [@HI4100](https://github.com/HI4100) • ✨ **ATELIER 41**
-
 
 ---
 
-## ✨ ATELIER 41 | Portfolio Signature
+<!-- ATELIER 41 | Portfolio Signature | Humza Warsi | github.com/HI4100 -->
 
-**Build it clearly. Test it carefully. Document it honestly. Improve it continuously.**
+## ✨ ATELIER 41 — Portfolio Signature
 
-Created and maintained as part of the **ATELIER 41** project series by **Humza Warsi**.
+> **Build it clearly. Analyze it carefully. Test it honestly. Improve it continuously.**
 
-- Portfolio: [github.com/HI4100](https://github.com/HI4100)
-- Project source: [ATELIER 41 — Retail Sales & Profit Analytics](https://github.com/HI4100/Atelier-RS41-Sales-Analytics)
+**Created as part of the ATELIER 41 portfolio by Humza Warsi.** ✨
 
-**Attribution & reuse:** This repository is published as a learning and portfolio project. Please retain this attribution and the project history when referencing or adapting the work. Do not present this repository or its original work as your own. Check the repository license before reusing code or other materials.
+🌐 **Portfolio:** [github.com/HI4100](https://github.com/HI4100)  
+📧 **Contact:** humzawarsi41@gmail.com
+
+### 💎 ATELIER 41 Identity
+**A consistent signature across my practical technology projects — where learning is demonstrated through work, documentation and continuous improvement.**
+
+*Maybe fate brought you here for your sparkling future. ✨ Let's connect, learn and build something meaningful.* 🚀
+
+<!-- © Humza Warsi | ATELIER 41 -->
