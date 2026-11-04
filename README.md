@@ -1,97 +1,183 @@
-# Atelier Retail Sales Analytics
+# ATELIER | Retail Sales & Profit Analytics
 
-A reproducible retail analytics portfolio project built with **Python, pandas, SQL and data visualisation**. It demonstrates data validation, KPI development, segmentation, time-series summaries, SQL analysis and business communication.
+An end-to-end retail analytics portfolio project combining **Python, pandas, SQL, data validation and Microsoft Power BI**.
 
-> **Data transparency:** the 360-row dataset is synthetic practice data generated for this portfolio. It is not from a real company and contains no real customer information. Profit and profit margin are illustrative estimates based on assumed category cost ratios, not audited accounting results.
+The project analyses a 2025 retail sales dataset and presents the results through a two-page interactive Power BI dashboard focused on executive performance, products and profit.
 
-## Project questions
+> **Data transparency:** The 360-row dataset used in this portfolio is synthetic practice data. It does not represent a real company's customer or financial records. Profit values are illustrative estimates for analytical practice.
 
-- What are total sales, estimated profit, units sold and average order value?
-- Which regions and product categories contribute most to sales?
-- How do sales change month by month?
-- Which products and payment methods lead the sample?
-- How can the results be translated into practical business questions?
+---
 
-## Verified dataset profile
+## Dashboard
 
-| Check | Result |
+### Page 1 — Executive Overview
+The executive dashboard provides a high-level view of business performance:
+
+- **Total Sales:** ₹1.18M
+- **Total Orders:** 360
+- **Average Order Value:** ₹3.29K
+- **Units Sold:** 1K+
+- Sales by Region
+- Sales by Category
+- Sales by Payment Method
+- Monthly Sales Trend
+
+### Page 2 — Product & Profit Analysis
+The second page focuses on product, category and profitability performance:
+
+- **Total Profit:** ₹511.71K
+- Top Products by Sales
+- Profit by Category
+- Profit by Region
+- Category Sales Volume
+- Discount vs Profit Analysis
+- Interactive Region and Category slicers
+
+---
+
+## Key Dataset Findings
+
+| Metric | Result |
 |---|---:|
-| Records / unique order IDs | 360 / 360 |
-| Date coverage | 2025-01-01 to 2025-12-31 |
-| Missing values | 0 |
-| Duplicate order IDs | 0 |
-| Sales formula mismatches | 0 |
-| Units sold | 1,083 |
-| Sales after discounts | ₹11,83,184.10 |
-| Illustrative estimated profit | ₹5,11,709.71 |
-| Average order value | ₹3,286.62 |
+| Records / Unique Orders | 360 / 360 |
+| Date Coverage | Jan 1, 2025 – Dec 31, 2025 |
+| Missing Values | 0 |
+| Duplicate Order IDs | 0 |
+| Sales Formula Mismatches | 0 |
+| Units Sold | 1,083 |
+| Total Sales | ₹11,83,184.10 |
+| Estimated Profit | ₹5,11,709.71 |
+| Average Order Value | ₹3,286.62 |
 
-## Key sample observations
+### Sample insights
 
-- **South** is the largest sales region in this sample (₹3,26,299.00).
-- **Electronics** is the largest category by sales (₹3,58,636.45).
-- **June 2025** is the strongest month by sales (₹1,21,253.65).
-- **Card** is the most frequent payment method (100 of 360 orders).
+- **South** generated the highest sales among regions.
+- **Electronics** generated the highest category sales.
+- **June 2025** was the strongest month by sales.
+- **Card** was the most frequently used payment method in the dataset.
 
-These describe only the synthetic dataset and should not be interpreted as market or company performance.
+These findings describe the synthetic dataset only.
 
-## Visual overview
+---
 
-![Sales by region](visualizations/sales_by_region.svg)
+## Technology Stack
 
-![Sales by category](visualizations/sales_by_category.svg)
+- **Microsoft Power BI Desktop** — interactive dashboard and DAX measures
+- **Python** — analysis workflow
+- **pandas** — data processing and validation
+- **Matplotlib** — chart generation
+- **SQL** — analytical queries
+- **Git & GitHub** — version control and portfolio presentation
 
-![Monthly sales trend](visualizations/monthly_sales_trend.svg)
+---
 
-![Orders by payment method](visualizations/payment_methods.svg)
-
-## Repository structure
+## Repository Structure
 
 ```text
 Atelier-RS41-Sales-Analytics/
-├── data/
-│   ├── retail_sales.csv
-│   └── DATA_DICTIONARY.md
-├── reports/
-│   ├── initial_analysis.md
-│   └── business_insights.md
-├── sql/analysis_queries.sql
-├── tests/test_analysis.py
-├── analysis.py
-├── requirements.txt
+├── analysis.py                 # Python validation and analysis workflow
+├── requirements.txt            # Python dependencies
+├── data/                       # Source dataset and documentation
+├── outputs/                    # Generated summaries and charts
+├── powerbi/                    # Power BI project documentation / PBIX
+├── reports/                    # Business analysis reports
+├── sql/                        # SQL analysis queries
+├── tests/                      # Validation tests
 └── README.md
 ```
 
-## Run the analysis
+---
+
+## Power BI Measures
+
+The dashboard uses measures for core KPIs such as:
+
+- **Total Sales**
+- **Total Orders**
+- **Average Order Value**
+- **Units Sold**
+- **Total Profit**
+
+The report also uses interactive filtering to analyse results by **region** and **category**.
+
+---
+
+## Run the Python Analysis
 
 1. Install Python 3.10 or newer.
-2. Create a virtual environment: `python -m venv .venv`.
-3. Activate it (Windows: `.venv\\Scripts\\activate`; macOS/Linux: `source .venv/bin/activate`).
-4. Install packages: `pip install -r requirements.txt`.
-5. Run: `python analysis.py`.
-6. Run tests: `python -m unittest discover -s tests -v`.
+2. Create a virtual environment:
 
-The analysis validates the source data, prints KPI and segment summaries, writes six summary CSVs to `outputs/`, and exports four PNG charts to `outputs/charts/`.
+```bash
+python -m venv .venv
+```
 
-## Power BI dashboard
+3. Activate it.
 
-A Power BI Desktop dashboard build guide and DAX starter measures are available in [`powerbi/`](powerbi/). Follow [`powerbi/POWER_BI_GUIDE.md`](powerbi/POWER_BI_GUIDE.md) to import the CSV, create the Calendar relationship, build KPI measures, and assemble the interactive report. The editable `.pbix` is created locally in Power BI Desktop; it is not included until it has been built and reviewed.
+**Windows**
 
-## SQL
+```bash
+.venv\Scripts\activate
+```
 
-Import `data/retail_sales.csv` into SQLite as `retail_sales`, then execute `sql/analysis_queries.sql`. The file includes KPI, regional, category, monthly, payment, product, discount-band and region-category queries.
+**macOS / Linux**
 
-## Skills demonstrated
+```bash
+source .venv/bin/activate
+```
 
-Python, pandas, data validation, data cleaning principles, aggregation, KPI design, SQL, exploratory data analysis, data visualisation, unit testing, documentation and analytical storytelling.
+4. Install dependencies:
 
-## Limitations
+```bash
+pip install -r requirements.txt
+```
 
-- Synthetic sample with one row per order; not representative of a real retailer.
-- No customer-level, inventory, returns, shipping or marketing data.
-- Profit is estimated using assumptions and must not be treated as actual net profit.
-- Descriptive patterns do not establish causation or forecast future performance.
+5. Run the analysis:
+
+```bash
+python analysis.py
+```
+
+6. Run tests:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+---
+
+## Data Quality Checks
+
+The Python workflow validates:
+
+- Required columns
+- Empty datasets
+- Missing values
+- Duplicate order IDs
+- Date validity
+- Numeric data types
+- Positive quantities and sales values
+- Discount ranges
+- Sales calculation consistency
+
+---
+
+## Project Limitations
+
+- The dataset is synthetic and intended for portfolio practice.
+- The project does not include customer-level or personally identifiable data.
+- Profit is illustrative and should not be treated as audited net profit.
+- Results are descriptive and should not be interpreted as forecasts.
+
+---
 
 ## Author
 
-Humza Warsi · [GitHub](https://github.com/HI4100) · [LinkedIn](https://www.linkedin.com/in/humza-warsi-910aa941b/)
+**Humza Warsi**
+
+GitHub: https://github.com/HI4100
+
+LinkedIn: https://www.linkedin.com/in/humza-warsi-910aa941b/
+
+---
+
+⭐ If you found this project useful, feel free to explore the repository and dashboard.
